@@ -1,0 +1,24 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">voir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let praticien of praticiens">
+            <td>{{ praticien.id }}</td>
+            <td>{{ praticien.nom }}</td>
+<!--            <td><a href="mailto:{{ praticien.email }}">{{ praticien.email }}</a></td>-->
+            <td>{{ praticien.prenom }}</td>
+            <td><button (click)="onViewPraticien(praticien.id)" >voir</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button (click)="onCreate()" >nouveau</button>
+    </div>
+  </div>

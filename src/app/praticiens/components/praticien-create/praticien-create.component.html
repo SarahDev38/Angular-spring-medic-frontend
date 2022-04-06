@@ -1,0 +1,21 @@
+<div class="form-card">
+    <h2>Nouveau Praticien</h2>
+    <form [formGroup]="praticienForm">
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" formControlName="nom">
+        </div>
+        <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" formControlName="prenom">
+        </div>
+        <div class="action-buttons">
+            <button type="submit" (click)="onSubmitForm()" [disabled]="praticienForm.invalid">Enregistrer</button>
+            <button (click)="onBack()">Annuler</button>
+        </div>
+    </form>
+</div>
+<div class="praticien-card" *ngIf="praticienPreview$ | async as praticien">
+    <h2> {{ praticien.nom | uppercase}} </h2>
+    <h2> {{ praticien.prenom | titlecase}} </h2>
+</div>

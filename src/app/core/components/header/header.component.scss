@@ -1,0 +1,38 @@
+header {
+    display: inline-block;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    background: linear-gradient(135deg, #eee 5%, rgb(0, 154, 206));
+    margin-bottom: 20px;
+    padding: 10px;
+    img {
+        float: left;
+        height: 120px;
+    }
+}
+.title {
+    font-size: 20px;
+    @media (min-width: 800px) {
+        font-size: 26px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 40px;
+    }
+}
+a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.active {
+    color: #666;
+    text-decoration: underline;
+}
+button {
+    margin: 0 20px;
+    border-radius: 50%;
+}

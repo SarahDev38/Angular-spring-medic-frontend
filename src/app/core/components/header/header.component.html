@@ -1,0 +1,12 @@
+<header>
+    <img [src]="imageUrl" alt="logo">
+    <p class="title">gestion des structures médicales et suivi des patients</p>
+    <nav>
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a routerLink="consultations" routerLinkActive="active">Consultations</a>
+        <a routerLink="praticiens" routerLinkActive="active">Praticiens</a>
+        <a routerLink="patients" routerLinkActive="active">Patients</a>
+        <button (click)="onAddNewPraticien()">+</button>
+    </nav>
+
+</header>

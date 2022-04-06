@@ -1,0 +1,10 @@
+<div class="praticien-card" *ngIf="praticien$ | async as praticien">
+    <h2> Praticien </h2>
+    <p> {{praticien.nom | uppercase}} </p>
+    <p> {{ praticien.prenom}} </p>
+
+    <p>
+        <button (click)="onEdit(praticien.id)">modifier</button>
+        <button (click)="onBack()">retour</button>
+    </p>
+</div>
